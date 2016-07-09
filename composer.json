@@ -12,11 +12,6 @@
             "email": "apostolossiokas@gmail.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Siokas\\LaravelEmbedDirectives\\": "src"
-        }
-    },
     "minimum-stability": "dev",
     "support": {
     "email": "apostolossiokas@gmail.com"
