@@ -18,6 +18,7 @@ To install the package:
 `composer require siokas/laravelembeddirectives`
 
 To get access to the package:
+
 1. Go to your project's folder and open the config/app.php file
 2. Navigate to the *providers* section and add the following line
 
