@@ -1,0 +1,20 @@
+{
+    "name": "siokas/laravelembeddirectives",
+    "description": "Provides a custom Laravel Blade directive to embed anything in the view using the Embed\\Embed package.",
+    "require": {
+        "embed/embed": "^2.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Apostolos Siokas",
+            "email": "apostolossiokas@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Siokas\\LaravelEmbedDirectives\\": "laravelembeddirectives/src"
+        }
+    },
+    "minimum-stability": "stable"
+}
