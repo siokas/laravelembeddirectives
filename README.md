@@ -1,4 +1,4 @@
-[![Packagist](https://img.shields.io/packagist/v/symfony/symfony.svg?maxAge=2592000)](https://packagist.org/packages/siokas/laravelembeddirectives#v1.0-beta)
+[![Packagist](https://img.shields.io/packagist/v/siokas/laravelembeddirectives.svg?maxAge=2592000)](https://packagist.org/packages/siokas/laravelembeddirectives#v1.0-beta)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7e0ec2f3e88f444082f599571680af25)](https://www.codacy.com/app/apostolossiokas/laravelembeddirectives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=siokas/laravelembeddirectives&amp;utm_campaign=Badge_Grade)
 [![Total Downloads](https://poser.pugx.org/siokas/laravelembeddirectives/downloads)](https://packagist.org/packages/siokas/laravelembeddirectives)
 [![Latest Stable Version](https://poser.pugx.org/siokas/laravelembeddirectives/v/stable)](https://packagist.org/packages/siokas/laravelembeddirectives)
