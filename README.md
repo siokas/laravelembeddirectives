@@ -28,6 +28,11 @@ Option:
 
 `@embed('https://www.youtube.com/watch?v=g4BbeHYCR1E', 500, 500)`
 
+# Requirements
+
+Embed package: [oscarotero/Embed](https://github.com/oscarotero/Embed)
+
+
 # License (MIT)
 
 The MIT License (MIT)
