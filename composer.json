@@ -15,6 +15,5 @@
         "psr-4": {
             "Siokas\\LaravelEmbedDirectives\\": "laravelembeddirectives/src"
         }
-    },
-    "minimum-stability": "stable"
+    }
 }
