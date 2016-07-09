@@ -3,6 +3,7 @@
 This package lets Laravel users embed any social media link in the views using a simple blade command. To install and use the package, complete the simple steps that are following.
 
 To install the package:
+
 1. Open your terminal
 2. Navigate to your project's directory source path
 3. Enter the following command
@@ -16,6 +17,7 @@ To get access to the package:
 `Siokas\LaravelEmbedDirectives\LaravelEmbedDirectivesServiceProvider::class`
 
 To use the package:
+
 1. In any Blade file use the *embed* command
 
 `@embed('your-link-goes-here')`
@@ -29,7 +31,7 @@ Option:
 # License (MIT)
 
 The MIT License (MIT)
-Copyright (c) 2016 Siokas Apostolos
+Copyright (c) 2016 Apostolos Siokas
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
