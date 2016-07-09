@@ -31,7 +31,7 @@ To use the package:
 
 Option:
 
- - If you want to specify the width and height of the embed post, just enter the numbers as parameters inside the command like this:
+ - If you want to specify the width and height of the embed post, just pass them as parameters like this:
 
 `@embed('https://www.youtube.com/watch?v=g4BbeHYCR1E', 500, 500)`
 
