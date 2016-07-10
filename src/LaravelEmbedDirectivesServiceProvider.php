@@ -16,6 +16,11 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->createEmbedBladeDirectiveWithSizeOption('embed');
+        $this->createEmbedBladeDirectiveWithSizeOption('youtube', 'https://www.youtube.com/watch?');
+        $this->createEmbedBladeDirectiveWithSizeOption('youtubeProfile', 'https://www.youtube.com/user/');
+        $this->createEmbedBladeDirectiveWithSizeOption('vimeo', 'https://www.vimeo.com/');
+        $this->createEmbedBladeDirectiveWithSizeOption('twitter', 'https://twitter.com/');
+        $this->createEmbedBladeDirectiveWithSizeOption('facebook', 'https://web.facebook.com/');
     }
 
     /**
@@ -33,19 +38,15 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function createEmbedBladeDirectiveWithSizeOption($embed)
+    public function createEmbedBladeDirectiveWithSizeOption($embed, $baseURL = null)
     {
-        Blade::directive($embed, function ($expression) {
-
-            // Get all properties from the array
+        Blade::directive($embed, function ($expression) use ($baseURL) {
             $url = $this->getParameters($expression)['url'];
             $width = $this->getParameters($expression)['width'];
             $height = $this->getParameters($expression)['height'];
 
-            // Get the HTML code
-            $code = $this->getEmbedCode($url);
+            $code = $this->getEmbedCode($baseURL, $url);
 
-            // Replace the width if nessesery
             if ($width) {
                 $code = $this->replaceTag($code, 'width', $width);
             }
@@ -63,12 +64,11 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
      *
      * @return string
      */
-    private function getEmbedCode($url)
+    private function getEmbedCode($baseURL = null, $url)
     {
+        $info = Embed::create($baseURL . $this->extractURL($url));
 
-        $embeded = Embed::create($this->extractURL($url));
-
-        return $embeded->code;
+        return $info->code;
     }
 
     /**
