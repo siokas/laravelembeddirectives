@@ -36,6 +36,23 @@ Option:
 
 `@embed('https://www.youtube.com/watch?v=g4BbeHYCR1E', 500, 500)`
 
+#Available Directives
+
+~~~~ 
+@embed('LINK-GOES-HERE') // for general use
+@youtube('LINK-GOES-HERE') 
+@youtubeProfile('LINK-GOES-HERE')
+@vimeo('LINK-GOES-HERE')
+@twitter('LINK-GOES-HERE')
+@facebook('LINK-GOES-HERE')
+~~~~
+
+ex. @twitter('taylorotwell')
+This code embeds the public profile of a user, but you can embed a specific tweet giving the id of the tweet. (ex. taylorotwell/status/751184223445381120) 
+
+_Within the @youtube directive, you have to enter the link to the video but only the part after the *watch?*_
+
+
 # Requirements
 
 Embed package: [oscarotero/Embed](https://github.com/oscarotero/Embed)
