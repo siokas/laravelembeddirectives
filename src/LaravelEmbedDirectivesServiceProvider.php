@@ -38,9 +38,9 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
         Blade::directive($embed, function ($expression) {
 
             // Get all properties from the array
-            $url = $this->getAttributes($expression)['url'];
-            $width = $this->getAttributes($expression)['width'];
-            $height = $this->getAttributes($expression)['height'];
+            $url = $this->getParameters($expression)['url'];
+            $width = $this->getParameters($expression)['width'];
+            $height = $this->getParameters($expression)['height'];
 
             // Get the HTML code
             $code = $this->getEmbedCode($url);
@@ -83,11 +83,11 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
     }
 
     /**
-     * Get all the attributes passed through blade directive.
+     * Get the parameters passed through blade directive.
      *
      * @return string or null
      */
-    private function getAttributes($expression)
+    private function getParameters($expression)
     {
 
         $segments = explode(',', preg_replace("/[\(\)]/", '', $expression));
