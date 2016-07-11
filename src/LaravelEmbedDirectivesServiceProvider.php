@@ -30,7 +30,6 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
     }
 
     /**
@@ -64,9 +63,9 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
      *
      * @return string
      */
-    private function getEmbedCode($baseURL = null, $url)
+    private function getEmbedCode($baseURL, $url)
     {
-        $info = Embed::create($baseURL . $this->extractURL($url));
+        $info = Embed::create($baseURL.$this->extractURL($url));
 
         return $info->code;
     }
@@ -78,8 +77,9 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
      */
     private function extractURL($url)
     {
-        $charsToDelete = array("'", "(", ")");
-        return str_replace($charsToDelete, "", $url);
+        $charsToDelete = ["'", '(', ')'];
+
+        return str_replace($charsToDelete, '', $url);
     }
 
     /**
@@ -89,14 +89,13 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
      */
     private function getParameters($expression)
     {
-
         $segments = explode(',', preg_replace("/[\(\)]/", '', $expression));
 
-        $elements = array(
-            'url' => with(trim(str_replace("'", "", $segments[0]))),
-            'width' => null,
+        $elements = [
+            'url'    => with(trim(str_replace("'", '', $segments[0]))),
+            'width'  => null,
             'height' => null,
-        );
+        ];
 
         if (count($segments) > 2) {
             $elements['width'] = with(trim($segments[1]));
@@ -113,7 +112,8 @@ class LaravelEmbedDirectivesServiceProvider extends ServiceProvider
      */
     private function replaceTag($code, $tag, $value)
     {
-        $pattern = "/" . $tag . "=\"[0-9]*\"/";
-        return preg_replace($pattern, $tag . "='" . $value . "'", $code);
+        $pattern = '/'.$tag.'="[0-9]*"/';
+
+        return preg_replace($pattern, $tag."='".$value."'", $code);
     }
 }
