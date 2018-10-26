@@ -36,7 +36,7 @@ Option:
 
 `@embed('https://www.youtube.com/watch?v=g4BbeHYCR1E', 500, 500)`
 
-#Available Directives
+# Available Directives
 
 ~~~~ 
 @embed('LINK-GOES-HERE') // for general use
